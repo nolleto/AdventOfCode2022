@@ -23,8 +23,20 @@ class CalorieCounting
   end
 
   def elve_with_most_calories
-    elves_calories_couting.reduce do |acc, elve_calories|
+    top_three_elves_with_most_calories.reduce do |acc, elve_calories|
       acc.total_calories > elve_calories.total_calories ? acc : elve_calories
+    end
+  end
+
+  def top_three_elves_with_most_calories
+    @top_three_elves_with_most_calories ||= elves_calories_couting.sort_by do |elve|
+      -elve.total_calories
+    end.take(3)
+  end
+
+  def top_three_elves_with_most_calories_total_calories
+    top_three_elves_with_most_calories.reduce(0) do |acc, elve_calories|
+      acc + elve_calories.total_calories
     end
   end
 
@@ -44,4 +56,15 @@ end
 
 all_elves_calories_couting = File.read('input.txt')
 calorie_counting = CalorieCounting.new(all_elves_calories_couting)
+
+puts '--- Elve with most calories ---'
+puts
 puts calorie_counting.elve_with_most_calories
+puts
+puts
+puts '--- Top 3 elves with most calories ---'
+puts
+calorie_counting.top_three_elves_with_most_calories.each do |elve|
+  puts elve
+end
+puts "Total Calories: #{calorie_counting.top_three_elves_with_most_calories_total_calories}"
