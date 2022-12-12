@@ -1,8 +1,8 @@
-require_relative '../../day_2/rock_paper_scissors_round'
+require_relative '../../day_2/rock_paper_scissors_round_strategy_1'
 
-RSpec.describe RockPaperScissorsRound do
+RSpec.describe RockPaperScissorsRoundStrategy1 do
   describe 'Opponent VS Me - Round - Rock VS Paper' do
-    let(:round) { RockPaperScissorsRound.new('A Y') }
+    let(:round) { RockPaperScissorsRoundStrategy1.new('A Y') }
 
     context '#score' do
       it 'returns 8' do
@@ -30,7 +30,7 @@ RSpec.describe RockPaperScissorsRound do
   end
 
   describe 'Opponent VS Me - Round - Rock VS Scissors' do
-    let(:round) { RockPaperScissorsRound.new('A Z') }
+    let(:round) { RockPaperScissorsRoundStrategy1.new('A Z') }
 
     context '#score' do
       it 'returns 3' do
@@ -58,7 +58,7 @@ RSpec.describe RockPaperScissorsRound do
   end
 
   describe 'Opponent VS Me - Round - Rock VS Rock' do
-    let(:round) { RockPaperScissorsRound.new('A X') }
+    let(:round) { RockPaperScissorsRoundStrategy1.new('A X') }
 
     context '#score' do
       it 'returns 4' do
@@ -86,7 +86,7 @@ RSpec.describe RockPaperScissorsRound do
   end
 
   describe 'Opponent VS Me - Round - Paper VS Paper' do
-    let(:round) { RockPaperScissorsRound.new('B Y') }
+    let(:round) { RockPaperScissorsRoundStrategy1.new('B Y') }
 
     context '#score' do
       it 'returns 5' do
@@ -114,7 +114,7 @@ RSpec.describe RockPaperScissorsRound do
   end
 
   describe 'Opponent VS Me - Round - Paper VS Scissors' do
-    let(:round) { RockPaperScissorsRound.new('B Z') }
+    let(:round) { RockPaperScissorsRoundStrategy1.new('B Z') }
 
     context '#score' do
       it 'returns 9' do
@@ -142,7 +142,7 @@ RSpec.describe RockPaperScissorsRound do
   end
 
   describe 'Opponent VS Me - Round - Paper VS Rock' do
-    let(:round) { RockPaperScissorsRound.new('B X') }
+    let(:round) { RockPaperScissorsRoundStrategy1.new('B X') }
 
     context '#score' do
       it 'returns 1' do
@@ -170,7 +170,7 @@ RSpec.describe RockPaperScissorsRound do
   end
 
   describe 'Opponent VS Me - Round - Scissors VS Paper' do
-    let(:round) { RockPaperScissorsRound.new('C Y') }
+    let(:round) { RockPaperScissorsRoundStrategy1.new('C Y') }
 
     context '#score' do
       it 'returns 2' do
@@ -198,7 +198,7 @@ RSpec.describe RockPaperScissorsRound do
   end
 
   describe 'Opponent VS Me - Round - Scissors VS Scissors' do
-    let(:round) { RockPaperScissorsRound.new('C Z') }
+    let(:round) { RockPaperScissorsRoundStrategy1.new('C Z') }
 
     context '#score' do
       it 'returns 6' do
@@ -226,7 +226,7 @@ RSpec.describe RockPaperScissorsRound do
   end
 
   describe 'Opponent VS Me - Round - Scissors VS Rock' do
-    let(:round) { RockPaperScissorsRound.new('C X') }
+    let(:round) { RockPaperScissorsRoundStrategy1.new('C X') }
 
     context '#score' do
       it 'returns 7' do
