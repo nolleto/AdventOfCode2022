@@ -1,3 +1,5 @@
+require_relative './rock_paper_scissors_round'
+
 class RockPaperScissorsGame
   def initialize(all_rounds)
     @all_rounds = all_rounds

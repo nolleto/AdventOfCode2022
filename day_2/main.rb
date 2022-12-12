@@ -1,4 +1,3 @@
-require_relative './rock_paper_scissors_round'
 require_relative './rock_paper_scissors_game'
 
 input_path = File.join(File.dirname(__FILE__), 'input.txt')
