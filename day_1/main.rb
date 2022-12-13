@@ -54,7 +54,8 @@ end
 # Find the Elf carrying the most Calories.
 # How many total Calories is that Elf carrying?
 
-all_elves_calories_couting = File.read('input.txt')
+input_path = File.join(File.dirname(__FILE__), 'input.txt')
+all_elves_calories_couting = File.read(input_path)
 calorie_counting = CalorieCounting.new(all_elves_calories_couting)
 
 puts '--- Elve with most calories ---'
