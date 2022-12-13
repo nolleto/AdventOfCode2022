@@ -7,22 +7,13 @@ class RockPaperScissorsRoundStrategy1
     'Z' => 'Scissors'
   }
 
-  def initialize(command)
-    @command = command
+  def initialize(column1, column2)
+    @column1 = column1
+    @column2 = column2
   end
 
-  def self.init(command)
-    new(command)
-  end
-
-  def score
-    match_score + RockPaperScissors.score(my_play)
-  end
-
-  def match_score
-    return 0 if lost?
-    return 3 if draw?
-    6
+  def self.init(column1, column2)
+    new(column1, column2)
   end
 
   def lost?
@@ -38,24 +29,10 @@ class RockPaperScissorsRoundStrategy1
   end
 
   def opponent_play
-    @opponent_play ||= RockPaperScissors.descrypt(commands[:opponent])
+    @opponent_play ||= RockPaperScissors.descrypt(@column1)
   end
 
   def my_play
-    @my_play ||= DECRYPT_PLAY[commands[:my]]
-  end
-
-  private
-
-  def commands
-    opponent_command, my_command = splitted_commands
-    {
-      opponent: opponent_command,
-      my: my_command
-    }
-  end
-
-  def splitted_commands
-    @splitted_commands ||= @command.split(' ')
+    @my_play ||= DECRYPT_PLAY[@column2]
   end
 end

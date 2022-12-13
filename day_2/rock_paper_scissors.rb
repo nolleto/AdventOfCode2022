@@ -2,10 +2,7 @@ class RockPaperScissors
   DECRYPT_PLAY = {
     'A' => 'Rock',
     'B' => 'Paper',
-    'C' => 'Scissors',
-    'X' => 'Rock',
-    'Y' => 'Paper',
-    'Z' => 'Scissors'
+    'C' => 'Scissors'
   }
 
   WON = {

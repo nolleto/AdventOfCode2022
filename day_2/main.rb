@@ -9,6 +9,6 @@ game_with_strategy_2 = RockPaperScissorsGame.new(all_rounds, RockPaperScissorsRo
 
 puts '--- What would your total score be if everything goes exactly according to your strategy guide? ---'
 puts game_with_strategy_1.total_score
-
+puts
 puts "--- Following the Elf's instructions for the second column, what would your total score be if everything goes exactly according to your strategy guide? ---"
 puts game_with_strategy_2.total_score
