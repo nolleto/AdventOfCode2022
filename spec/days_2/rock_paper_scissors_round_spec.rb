@@ -1,5 +1,4 @@
 require_relative '../../day_2/rock_paper_scissors_round'
-require 'pry'
 
 RSpec.describe RockPaperScissorsRound do
   before do
