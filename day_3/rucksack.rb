@@ -1,6 +1,8 @@
 require_relative './item_priority'
 
 class Rucksack
+  attr_reader :all_items
+
   def initialize(all_items)
     @all_items = all_items
   end

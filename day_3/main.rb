@@ -6,3 +6,6 @@ rucksack_reorganization = RucksackReorganization.new(items)
 
 puts '--- What is the sum of the priorities of those item types? ---'
 puts rucksack_reorganization.total_rucksacks_priority
+puts
+puts '--- What is the sum of the priorities of those item types? ---'
+puts rucksack_reorganization.total_rucksacks_groups_priority
