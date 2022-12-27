@@ -1,5 +1,4 @@
 require_relative '../../day_3/rucksack_reorganization'
-require 'pry'
 
 RSpec.describe Rucksack do
   let(:input) { File.read('./day_3/small_input.txt') }
